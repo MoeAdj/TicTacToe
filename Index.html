@@ -1,39 +1,43 @@
-<div class="outer-container">
-  <button class="hard-reset">Reset All</button>
-  <p class="score-1"><span class="points"></span><span class="name"></span></p>
-  <i class="points-divider">&#124;</i>
-  <p class="score-2"><span class="points"></span><span class="name"></span></p>
-  <div class="player-one-turn">
-    <p></p>
-  </div>
-  <div class="player-two-turn">
-    <p></p>
-  </div>
-  <div class="board-container">
-    <div class="game-starter">
-        <p>Would you like to be X or O?</p>
-        <button class="choose-x">X</button>
-        <button class="choose-o">O</button>
-        <button class="back-button"><i class="fa fa-arrow-left"></i> Back</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="menu-screen" id="menu">
+      <h1>Cyber Tic-Tac-Toe</h1>
+      <p>Select Mode</p>
+      <button id="onePlayer">1 Player</button>
+      <button id="twoPlayer">2 Player</button>
+    </div>
+
+    <div class="symbol-screen hidden" id="symbol">
+      <p>Choose Your Symbol</p>
+      <button id="chooseX">X</button>
+      <button id="chooseO">O</button>
+    </div>
+
+    <div class="game-screen hidden" id="game">
+      <div class="scoreboard">
+        <span id="score1">0</span> : <span id="score2">0</span>
       </div>
-      <div class="game-choice">
-        <p>How do you want to play?</p>
-        <button class="one-player">One Player</button>
-        <button class="two-player">Two Player</button>
+      <div class="status" id="status">Your Turn</div>
+      <div class="board" id="board">
+        <!-- cells will be created with JS -->
       </div>
-    <div class="game-board">
-      <div class="draw-message">
-        <p>It was a draw..</p>
-      </div>
-      <div class="lose-message">
-        <p>Uh oh, you lost..</p>
-      </div>
-      <div class="win-message">
-        <p>You Won!!! :)</p>
-      </div>
-      <canvas id="myCanvas"></canvas>
-      <ul class="boxes">
-      </ul>
+      <button id="reset">Reset</button>
+    </div>
+
+    <div class="message hidden" id="message">
+      <p id="messageText"></p>
+      <button onclick="location.reload()">Play Again</button>
     </div>
   </div>
-</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
